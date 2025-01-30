@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Styling for the header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the navigation links */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Container for the 'About' section blocks */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Ensures the blocks don't stretch too wide */
+}
+
+/* Each block inside the 'About' section */
+.about-block {
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px; /* Ensures the blocks don't get too small */
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the blocks */
+.about-block:hover {
+    transform: translateY(-10px);
+}
+
+/* Styling for the footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the blocks vertically */
+    }
+}

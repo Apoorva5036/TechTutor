@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTutor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Apply the background image to the header */
+        header {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/002/752/784/original/abstract-digital-background-with-technology-circuit-board-texture-electronic-motherboard-illustration-communication-and-engineering-concept-illustration-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 30px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Make sure the text in the header is readable */
+        header h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Style for sections */
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+        }
+
+        /* Style for tutorial container */
+        .tutorial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .tutorial-box {
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .tutorial-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Style for component details section */
+        .component-details {
+            margin-top: 20px;
+        }
+
+        .component-details h2 {
+            font-size: 1.5rem;
+        }
+
+        .component-details p {
+            font-size: 1.1rem;
+        }
+
+        /* New styles for hero section, testimonials, newsletter */
+        .hero-section {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-section {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2rem;
+        }
+
+        .testimonial-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .testimonial-box .testimonial {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .testimonial-box .testimonial p {
+            font-style: italic;
+        }
+
+        .newsletter-section {
+            background-color: #d1e7ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to TechTutor</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('tutorials')">Tutorials</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero-section">
+                <h2>Unlock the World of Electronics</h2>
+                <p>Learn how to use electronic components, lab equipment, and more with our step-by-step tutorials.</p>
+            </div>
+
+            <!-- Testimonials/Social Proof Section -->
+            <section class="testimonial-section">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-box">
+                    <div class="testimonial">
+                        <p>"TechTutor helped me understand electronics in ways that textbooks never could!"</p>
+                        <p>- John Doe</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"I built my first project using TechTutor tutorials. The guidance was perfect!"</p>
+                        <p>- Sarah Smith</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Great resource for both beginners and advanced learners in electronics."</p>
+                        <p>- Mike Johnson</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Tutorials Section -->
+            <section>
+                <h2>Featured Tutorials</h2>
+                <div class="tutorial-container">
+                    <div class="tutorial-box" onclick="showDetails('Resistor')">
+                        <img src="https://i5.walmartimages.com/asr/17c26f49-7388-4fb5-bca6-2f97d69ee00b_1.30d36ba5e00bf764a3aa1553cc1805ac.jpeg" alt="Resistor">
+                        <h3>Resistor</h3>
+                    </div>
+                    <div class="tutorial-box" onclick="showDetails('Capacitor')">
+                        <img src="https://th.bing.com/th/id/OIP.hY3VSi_q7Yn_jNv3Qq-USwHaF7?rs=1&pid=ImgDetMain" alt="Capacitor">
+                        <h3>Capacitor</h3>
+                    </div>
+                    <div class="tutorial-box" onclick="showDetails('Transistor')">
+                        <img src="https://electricalacademia.com/wp-content/uploads/2018/11/EM1-002.jpg" alt="Transistor">
+                        <h3>Transistor</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section">
+                <h2>Stay Updated with New Tutorials</h2>
+                <p>Sign up for our newsletter and get the latest updates and tutorials directly to your inbox!</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </section>
+
+        <section id="about" style="display: none;">
+            <h2>About TechTutor</h2>
+            <div class="about-block">
+            <h3>What is TechTutor?</h3>
+                <p>TechTutor is a platform designed to help individuals learn how to use electronic components, lab equipment, ICs, and much more. It's a valuable resource for students, professionals, and hobbyists who want to enhance their knowledge of electronics.</p>
+            </div>
+            <div class="about-block">
+                <h3>What Are the Uses of This Website?</h3>
+    
+                    <li>Provides detailed information on various electronic components and equipment.</li>
+                    <li>Offers interactive quizzes to test your knowledge.</li>
+                    <li>Helps students and professionals learn effectively at their own pace.</li>
+                    <li>Guides you step-by-step through various tutorials and practical examples.</li>
+            
+            </div>
+            <div class="about-block">
+                <h3>Why Should You Use TechTutor?</h3>
+                <p>TechTutor is the perfect resource for anyone looking to deepen their understanding of electronics. Whether you’re a student preparing for exams or a hobbyist building projects, TechTutor offers a comprehensive and user-friendly learning experience.</p>
+            </div>
+        </section>
+
+        <section id="tutorials" style="display: none;">
+            <h2>Select a Component to Learn</h2>
+            <div class="tutorial-container">
+                <div class="tutorial-box" onclick="showDetails('Resistor')">
+                    <img src="https://i5.walmartimages.com/asr/17c26f49-7388-4fb5-bca6-2f97d69ee00b_1.30d36ba5e00bf764a3aa1553cc1805ac.jpeg" alt="Resistor">
+                    <h3>Resistor</h3>
+                    </div>
+                    <div class="tutorial-box" onclick="showDetails('Capacitor')">
+                        <img src="https://th.bing.com/th/id/OIP.hY3VSi_q7Yn_jNv3Qq-USwHaF7?rs=1&pid=ImgDetMain" alt="Capacitor">
+                        <h3>Capacitor</h3>
+                        </div>
+                    <div class="tutorial-box" onclick="showDetails('Transistor')">
+                        <img src="https://electricalacademia.com/wp-content/uploads/2018/11/EM1-002.jpg" alt="Transistor">
+                        <h3>Transistor</h3>
+                    </div>
+                    <div class="tutorial-box" onclick="showDetails('Osciliscope')">
+                        <img src="https://res.cloudinary.com/iwh/image/upload/q_auto,g_center/w_auto,e_trim,c_fill,g_auto/assets/1/26/DS4014-Digital-Oscilloscopes.jpg" alt="Osciliscope">
+                        <h3>Osciliscope</h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out with any questions or suggestions at techtutor134@gmail.com.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 TechTutor. All rights reserved.</p>
+    </footer>
+    
+    <style>
+        .footer p {
+            font-size: 0.8rem; /* Make the text smaller */
+        }
+    </style>
+    
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => section.style.display = 'none');
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.style.display = 'block';
+        }
+
+        function showDetails(component) {
+            let url = '';
+            if (component === 'Resistor') {
+                url = 'https://ra-electronics.com/introduction-to-resistor-beginners-guide/';
+            } else if (component === 'Capacitor') {
+                url = 'https://ra-electronics.com/capacitor-the-beginners-guide/';
+            } else if (component === 'Transistor') {
+                url = 'https://www.tutorialspoint.com/basic_electronics/basic_electronics_transistors.htm';
+            } else if (component === 'Osciliscope') {
+                url = 'https://www.electronicshub.org/what-is-an-oscilloscope/';
+            }
+            else {
+                url = '';
+            }
+        
+            if (url) {
+                window.open(url, '_blank');
+            } else {
+                alert('Select a component to see its details.');
+            }
+        }
+    </script>
+</body>
+
+</html>

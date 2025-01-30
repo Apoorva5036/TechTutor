@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechTutor - Tutorials</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .tutorial-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .tutorial-box {
+      width: 100%;
+      text-align: center;
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .tutorial-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .tutorial-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .tutorial-box h3 {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .component-details {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .component-details h2 {
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tutorials Section -->
+  <section class="tutorial-container">
+    <div class="tutorial-box" onclick="showDetails('Resistor')">
+      <img src="https://i5.walmartimages.com/asr/17c26f49-7388-4fb5-bca6-2f97d69ee00b_1.30d36ba5e00bf764a3aa1553cc1805ac.jpeg" alt="Resistor">
+      <h3>Resistor</h3>
+    </div>
+    <div class="tutorial-box" onclick="showDetails('Capacitor')">
+      <img src="https://th.bing.com/th/id/OIP.hY3VSi_q7Yn_jNv3Qq-USwHaF7?rs=1&pid=ImgDetMain" alt="Capacitor">
+      <h3>Capacitor</h3>
+    </div>
+    <div class="tutorial-box" onclick="showDetails('Transistor')">
+      <img src="https://electricalacademia.com/wp-content/uploads/2018/11/EM1-002.jpg" alt="Transistor">
+      <h3>Transistor</h3>
+    </div>
+    <!-- Add more components as needed -->
+  </section>
+
+  <!-- Component Details Section -->
+  <section id="component-details" class="component-details">
+    <h2>Component Details</h2>
+    <p id="component-description">Select a component to see its details.</p>
+  </section>
+
+  <script>
+    function showDetails(component) {
+      const detailsSection = document.getElementById('component-details');
+      const descr
